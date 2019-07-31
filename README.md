@@ -15,7 +15,7 @@ Included New Relic Java APM agent is at version 5.3.0.
 1. `brew install hyperkit`
 2. `brew cask install minikube`
 3. `minikube config set vm-driver hyperkit`
-4. `minikube start —cpus 2 —memory 4096`
+4. `minikube start --cpus 2 —-memory 4096`
 5. `minikube dashboard` (should open a window in your default web browser)
 6. `kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080`
 7. `kubectl expose deployment hello-minikube --type=NodePort` (expose the service as a NodePort)
