@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: treasurehunt
+  labels:
+    serviceType: treasurehunt
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: treasurehunt
+      labels:
+        serviceType: treasurehunt
+    spec:
+      containers:
+        - name: treasurehunt
+          image: treasurehunt:latest
+          imagePullPolicy: Never
+          ports:
+          - containerPort: 8080
+          env:
+          - name: JAVA_OPTS
+            value: -Xmx64m -Xms64m
+          - name: TREASURE_LOCATION_X
+            valueFrom:
+              secretKeyRef:
+                name: treasurehunt-secrets
+                key: treasure.location.x
+          - name: TREASURE_LOCATION_Y
+            valueFrom:
+              secretKeyRef:
+                name: treasurehunt-secrets
+                key: treasure.location.y
+          volumeMounts:
+          - name: application-config
+            mountPath: "/config"
+            readOnly: true
+      volumes:
+      - name: application-config
+        configMap:
+          name: treasurehunt-config
+          items:
+          - key: application.properties
+            path: application.properties
