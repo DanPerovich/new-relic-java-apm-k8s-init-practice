@@ -5,11 +5,11 @@ To demonstrate how a Java application can be instrumented with New Relic APM usi
 
 Included New Relic Java APM agent is at version 5.3.0.
 
-## Pre-requisites
+## Prerequisites
 - MacOS and/or Linux
 - Docker (https://docs.docker.com/install/)
-- Minikube (https://github.com/kubernetes/minikube) installed.
 - Docker Hub account
+- Homebrew (https://brew.sh/)
 
 ## Install and test Minikube (https://github.com/kubernetes/minikube)
 1. `brew install hyperkit`
