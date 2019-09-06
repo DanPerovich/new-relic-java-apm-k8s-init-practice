@@ -1,7 +1,7 @@
 # Instrumenting Java Using Init Containers in Kubernetes
 
 ## Purpose
-To demonstrate how a Java application can be instrumented with New Relic APM using an init container methodology.  The init container methodology does not require ANY changes to the application to be instrumented's container.  There are a host of articles on the Internet describing init containers and their benefits, but a good place to start is the Kubernetes documenations (https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).
+To demonstrate how a Java application can be instrumented with New Relic APM using an init container methodology.  The init container methodology does not require ANY changes to the application to be instrumented's container.  There are a host of articles on the Internet describing init containers and their benefits, but a good place to start is the Kubernetes documenation (https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).
 
 Included New Relic Java APM agent is at version 5.3.0.
 
