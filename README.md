@@ -42,7 +42,7 @@ Included New Relic Java APM agent is at version 5.3.0.
 
 ## Modify the deployment descriptor to use the init container and override the default APM configuration values with those specific to this application/service
 1. `cd ..`
-2. `cp deployment.yaml.init.yaml treasurehunt/deployment.yaml` (it is okay to overwrite the original yams file, a backup is stored in the project home directory)
+2. `cp deployment.yaml.init.yaml treasurehunt/deployment.yaml` (it is okay to overwrite the original yaml file, a backup is stored in the project home directory)
 3. `vi treasurehunt/deployment.yaml`
 4. Insert your New Relic APM license key string (line 30)
 5. Update the image name on line 49 to reflect your Docker Hub username
